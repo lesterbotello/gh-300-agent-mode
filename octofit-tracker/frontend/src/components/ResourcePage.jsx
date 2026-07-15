@@ -16,7 +16,7 @@ function renderValue(value) {
   return value ?? '—'
 }
 
-function ResourcePage({ title, eyebrow, resourceName, columns }) {
+function ResourcePage({ title, eyebrow, resourceName, endpointUrl, columns }) {
   const [items, setItems] = useState([])
   const [status, setStatus] = useState('loading')
   const [error, setError] = useState('')
@@ -26,7 +26,7 @@ function ResourcePage({ title, eyebrow, resourceName, columns }) {
 
     async function loadItems() {
       try {
-        const result = await fetchCollection(resourceName)
+        const result = await fetchCollection(resourceName, endpointUrl)
 
         if (isMounted) {
           setItems(result.items)
@@ -45,7 +45,7 @@ function ResourcePage({ title, eyebrow, resourceName, columns }) {
     return () => {
       isMounted = false
     }
-  }, [resourceName])
+  }, [resourceName, endpointUrl])
 
   return (
     <section className="resource-page" aria-labelledby={`${resourceName}-title`}>

@@ -34,8 +34,8 @@ export function normalizeCollection(payload, resourceName) {
   return candidates.find(Array.isArray) ?? [];
 }
 
-export async function fetchCollection(resourceName) {
-  const response = await fetch(`${apiBaseUrl}/${resourceName}/`);
+export async function fetchCollection(resourceName, endpointUrl = `${apiBaseUrl}/${resourceName}/`) {
+  const response = await fetch(endpointUrl);
 
   if (!response.ok) {
     throw new Error(`Request failed with status ${response.status}`);
