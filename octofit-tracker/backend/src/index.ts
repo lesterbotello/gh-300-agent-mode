@@ -1,8 +1,8 @@
 import express from 'express';
 
-import { apiBaseUrl, port } from './config/apiUrl.js';
 import './config/database.js';
 import apiRouter from './routes/index.js';
+import { apiBaseUrl, port } from './server.js';
 
 const app = express();
 
