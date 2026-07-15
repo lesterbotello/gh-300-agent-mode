@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from '../api.js'
 import ResourcePage from './ResourcePage.jsx'
 
 function Leaderboard() {
@@ -5,7 +6,7 @@ function Leaderboard() {
     <ResourcePage
       title="Leaderboard"
       eyebrow="Competition"
-      resourceName="leaderboard"
+      resourceName={API_ENDPOINTS.leaderboard}
       columns={[
         { key: 'rank', label: 'Rank' },
         { key: 'username', label: 'User' },

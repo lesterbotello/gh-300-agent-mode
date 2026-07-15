@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from '../api.js'
 import ResourcePage from './ResourcePage.jsx'
 
 function Users() {
@@ -5,7 +6,7 @@ function Users() {
     <ResourcePage
       title="Users"
       eyebrow="Profiles"
-      resourceName="users"
+      resourceName={API_ENDPOINTS.users}
       columns={[
         { key: 'username', label: 'Username' },
         { key: 'name', label: 'Name', render: (user) => `${user.firstName} ${user.lastName}` },

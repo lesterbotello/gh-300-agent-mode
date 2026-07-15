@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from '../api.js'
 import ResourcePage from './ResourcePage.jsx'
 
 function Workouts() {
@@ -5,7 +6,7 @@ function Workouts() {
     <ResourcePage
       title="Workouts"
       eyebrow="Suggestions"
-      resourceName="workouts"
+      resourceName={API_ENDPOINTS.workouts}
       columns={[
         { key: 'title', label: 'Workout' },
         { key: 'focusArea', label: 'Focus' },

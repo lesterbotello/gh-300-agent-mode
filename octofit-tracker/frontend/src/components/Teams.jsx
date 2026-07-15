@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from '../api.js'
 import ResourcePage from './ResourcePage.jsx'
 
 function Teams() {
@@ -5,7 +6,7 @@ function Teams() {
     <ResourcePage
       title="Teams"
       eyebrow="Groups"
-      resourceName="teams"
+      resourceName={API_ENDPOINTS.teams}
       columns={[
         { key: 'name', label: 'Team' },
         { key: 'city', label: 'City' },

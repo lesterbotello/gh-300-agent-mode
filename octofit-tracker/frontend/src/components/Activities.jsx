@@ -1,3 +1,4 @@
+import { API_ENDPOINTS } from '../api.js'
 import ResourcePage from './ResourcePage.jsx'
 
 function formatDate(value) {
@@ -9,7 +10,7 @@ function Activities() {
     <ResourcePage
       title="Activities"
       eyebrow="Training Log"
-      resourceName="activities"
+      resourceName={API_ENDPOINTS.activities}
       columns={[
         { key: 'username', label: 'User' },
         { key: 'activityType', label: 'Activity' },

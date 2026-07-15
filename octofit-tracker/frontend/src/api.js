@@ -1,5 +1,13 @@
 const codespaceName = import.meta.env.VITE_CODESPACE_NAME;
 
+export const API_ENDPOINTS = Object.freeze({
+  activities: 'activities',
+  leaderboard: 'leaderboard',
+  teams: 'teams',
+  users: 'users',
+  workouts: 'workouts',
+});
+
 export const apiBaseUrl = codespaceName
   ? `https://${codespaceName}-8000.app.github.dev/api`
   : 'http://localhost:8000/api';
